@@ -1,0 +1,29 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter";
+}
+
+html {
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 30px;
+  color: var(--black);
+  font-weight: 700;
+}
+
+p {
+  font-size: 16px;
+  color: var(--grey);
+  margin: 10px 0;
+}
+
+a {
+  font-weight: 600;
+}
