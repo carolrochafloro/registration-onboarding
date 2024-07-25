@@ -1,11 +1,19 @@
-/* Vector 1 */
-.decor {
-  position: absolute;
-  width: 33.5px;
-  height: 33px;
-  left: 517.5px;
-  top: 639px;
-
+.decor-vertical {
+  width: 0.5rem;
+  height: 1rem;
   background: var(--white);
-  transform: matrix(-1, 0, 0, 1, 0, 0);
+  z-index: 1;
+  align-self: flex-end;
+  margin-right: 3rem;
+  display: inline;
+}
+
+.decor-horizontal {
+  width: 1.5rem;
+  height: 0.5rem;
+  background: var(--white);
+  z-index: 1;
+  align-self: flex-end;
+  margin-right: 3rem;
+  display: inline;
 }
