@@ -12,6 +12,11 @@ div {
       align-items: center;
       color: var(--grey);
       gap: 0.5rem;
+      transition: 0.5s;
+
+      &:hover {
+        color: var(--light-grey);
+      }
     }
 
     div {
@@ -22,11 +27,13 @@ div {
         margin: 0;
         color: var(--light-grey);
         text-align: right;
+        text-transform: uppercase;
       }
 
       .bold {
         font-weight: 600;
         color: var(--grey);
+        text-transform: none;
       }
     }
   }
