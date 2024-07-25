@@ -9,7 +9,7 @@
   <p>To begin this journey, tell us what type of account you'd be opening.</p>
 
   <div class="options">
-    <button class="btn btn-account">
+    <button class="btn btn-account" [routerLink]="['/individual']">
       <img
         src="individual.svg"
         alt="Individual account icon."
@@ -24,7 +24,7 @@
       <img src="arrow-right.svg" alt="Arrow icon" loading="eager" />
     </button>
 
-    <button class="btn btn-account">
+    <button class="btn btn-account" [routerLink]="['/business']">
       <img
         src="business.svg"
         alt="Business account icon."
