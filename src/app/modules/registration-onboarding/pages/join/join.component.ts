@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { HeaderLoginComponent } from '../../components/header-login/header-login.component';
 
 @Component({
   selector: 'app-join',
   standalone: true,
-  imports: [HeaderLoginComponent],
+  imports: [],
   templateUrl: './join.component.html',
   styleUrl: './join.component.scss',
 })

@@ -1,0 +1,18 @@
+.header {
+  padding-top: 1.5rem;
+  padding-right: 3rem;
+  text-align: right;
+  justify-content: end;
+
+  a:hover {
+    transition: 0.5s;
+    color: var(--primary-010);
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  margin: 2.5rem 6rem;
+}
