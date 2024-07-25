@@ -11,7 +11,7 @@ body {
 }
 
 html {
-  font-size: 18px;
+  font-size: 14px;
 }
 
 h1 {
@@ -28,4 +28,6 @@ p {
 
 a {
   font-weight: 600;
+  text-decoration: none;
+  color: var(--primary);
 }

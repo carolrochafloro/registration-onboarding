@@ -12,6 +12,9 @@
   justify-content: start;
   align-items: start;
 
+  cursor: default;
+  user-select: none;
+
   &::before {
     content: "";
     position: absolute;
@@ -59,9 +62,9 @@
       p {
         margin-top: 1rem;
         color: var(--white);
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 400;
-        line-height: 1.5rem;
+        line-height: 2rem;
       }
     }
 
@@ -82,8 +85,5 @@
         font-size: 12px;
       }
     }
-  }
-
-  img {
   }
 }

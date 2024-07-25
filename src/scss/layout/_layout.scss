@@ -2,3 +2,14 @@ body {
   display: grid;
   grid-template-columns: 45vw auto;
 }
+
+.container {
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+
+  position: relative;
+  box-sizing: border-box;
+
+  flex-wrap: wrap;
+}
