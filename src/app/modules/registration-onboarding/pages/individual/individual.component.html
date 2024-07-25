@@ -1,1 +1,58 @@
 <app-header [step]="step" [stage]="stage" />
+
+<div class="container">
+  <h1>Register Individual Account!</h1>
+  <p class="p-style">For regulatory compliance, your details are required.</p>
+  <div class="separator"></div>
+  <form action="input">
+    <div class="input-container">
+      <label for="fullname">Full name</label>
+      <input
+        type="text"
+        placeholder="Your name"
+        required
+        aria-label="Your name"
+      />
+    </div>
+
+    <div class="input-container">
+      <label for="email">E-mail</label>
+      <input
+        type="text"
+        placeholder="E-mail"
+        required
+        aria-label="Your e-mail"
+      />
+    </div>
+
+    <div class="input-container">
+      <label for="password">Passowrd</label>
+      <input
+        type="password"
+        placeholder="Password"
+        required
+        aria-label="Your password"
+      />
+    </div>
+
+    <div class="checkbox">
+      <input type="checkbox" name="terms-and-conditions" value="true" />
+      <label for="terms-and-conditions">I agree to terms & conditions</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Register Account</button>
+  </form>
+
+  <div class="social">
+    <div class="or">
+      <div class="separator"></div>
+      <p>Or</p>
+      <div class="separator"></div>
+    </div>
+
+    <button type="" class="btn btn-social">
+      <img src="google.svg" alt="" />
+      Register with google
+    </button>
+  </div>
+</div>

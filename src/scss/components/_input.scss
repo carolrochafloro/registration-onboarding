@@ -1,0 +1,28 @@
+input {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid var(--light-grey);
+  padding: 0.5rem 1rem;
+  outline: none;
+  margin-top: 0.5rem;
+  transition: 0.5s;
+}
+
+input:hover {
+  box-shadow: var(--box-shadow);
+}
+
+input:focus {
+  border: 1px solid var(--primary);
+  box-shadow: var(--box-shadow);
+}
+
+::placeholder {
+  font-size: 12px;
+  color: var(--light-grey);
+}
+
+label {
+  font-size: 10px;
+  color: var(--grey);
+}

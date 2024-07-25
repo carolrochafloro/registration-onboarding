@@ -1,8 +1,9 @@
 .btn {
   display: flex;
-  //   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  width: 100%;
 
   padding: 1rem 1.5rem;
   border: none;
@@ -11,14 +12,23 @@
   cursor: pointer;
   transition: 0.5s;
 
+  font-size: 1rem;
+
   &.btn-primary {
     background: var(--primary);
+    color: var(--white);
+    width: 100%;
+    transition: 0.5s;
+
+    &:hover {
+      background-color: var(--primary-010);
+    }
   }
   &.btn-account {
     background: var(--white);
     margin: 1rem 0 0 0;
     width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
     h2 {
       font-size: 1rem;
@@ -39,6 +49,24 @@
     &:hover {
       background: rgba(0, 0, 0, 0.1);
       box-shadow: none;
+    }
+  }
+
+  &.btn-social {
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    position: relative;
+    display: flex;
+
+    img {
+      position: absolute;
+      left: 20px; /* Ajuste conforme necessário */
+      top: 50%;
+      transform: translateY(-50%); /* Centraliza verticalmente a imagem */
+    }
+
+    &:hover {
+      border: 1px solid var(--primary);
     }
   }
 }
