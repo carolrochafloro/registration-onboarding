@@ -5,11 +5,9 @@ body {
 
 .container {
   display: flex;
-  // justify-content: center;
   align-items: center;
-
-  position: relative;
+  margin: 2.5rem 6rem;
+  width: 60%;
   box-sizing: border-box;
-
   flex-wrap: wrap;
 }
