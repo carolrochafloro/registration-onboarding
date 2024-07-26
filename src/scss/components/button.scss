@@ -20,6 +20,13 @@
     width: 100%;
     transition: 0.5s;
 
+    &:disabled {
+      background-color: var(--light-grey);
+      &:hover {
+        background-color: var(--light-grey);
+      }
+    }
+
     &:hover {
       background-color: var(--primary-010);
     }
