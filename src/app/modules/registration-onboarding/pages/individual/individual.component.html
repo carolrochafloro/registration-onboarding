@@ -4,11 +4,13 @@
   <h1>Register Individual Account!</h1>
   <p class="p-style">For regulatory compliance, your details are required.</p>
   <div class="separator"></div>
-  <form action="input">
+  <form action="input" (ngSubmit)="onSubmit(form)" #form="ngForm">
     <div class="input-container">
-      <label for="fullname">Full name</label>
+      <label for="fullName">Full name</label>
       <input
         type="text"
+        name="fullName"
+        ngModel
         placeholder="Your name"
         required
         aria-label="Your name"
@@ -20,6 +22,8 @@
       <input
         type="text"
         placeholder="E-mail"
+        name="email"
+        ngModel
         required
         aria-label="Your e-mail"
       />
@@ -30,17 +34,30 @@
       <input
         type="password"
         placeholder="Password"
+        ngModel
+        name="password"
         required
         aria-label="Your password"
       />
     </div>
 
     <div class="checkbox">
-      <input type="checkbox" name="terms-and-conditions" value="true" />
+      <input
+        type="checkbox"
+        name="terms-and-conditions"
+        value="true"
+        [(ngModel)]="agreeTerms"
+      />
       <label for="terms-and-conditions">I agree to terms & conditions</label>
     </div>
 
-    <button type="submit" class="btn btn-primary">Register Account</button>
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="form.invalid || !agreeTerms"
+    >
+      Register Account
+    </button>
   </form>
 
   <div class="social">
@@ -50,8 +67,8 @@
       <div class="separator"></div>
     </div>
 
-    <button type="" class="btn btn-social">
-      <img src="google.svg" alt="" />
+    <button type="button" class="btn btn-social">
+      <img src="google.svg" alt="Google icon" />
       Register with google
     </button>
   </div>
