@@ -1,0 +1,38 @@
+<div class="container">
+  <h1>Complete your profile!</h1>
+  <p class="p-style">For regulatory compliance, your details are required.</p>
+  <div class="separator"></div>
+
+  <div class="form">
+    <form action="input" (ngSubmit)="onSubmit(form)" #form="ngForm">
+      <div class="input-container">
+        <label for="bvn">Bank Verification Number (BNV)</label>
+        <div class="input-with-icon">
+          <input
+            type="text"
+            name="bvn"
+            ngModel
+            placeholder="Type your BVN with 5 digits"
+            required
+            aria-label="Your BVN"
+            pattern="\d{5}"
+            #bvnInput="ngModel"
+          />
+          <img
+            src="check.svg"
+            alt="Check icon"
+            [ngClass]="{ visible: bvnInput.valid }"
+          />
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="form.invalid">
+        Save & Continue
+      </button>
+    </form>
+    <div class="footer">
+      <img src="lock.svg" alt="lock icon" />
+      <p>Your info is safely secured.</p>
+    </div>
+  </div>
+</div>
