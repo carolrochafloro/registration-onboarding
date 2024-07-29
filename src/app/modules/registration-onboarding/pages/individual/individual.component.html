@@ -1,1 +1,14 @@
-<app-individual-step1 />
+<app-header [step]="step" [stage]="stage" />
+
+@if (step === 1) {
+<app-individual-step1
+  (formSubmitted)="goToNextStep($event)"
+></app-individual-step1>
+} @if (step === 2) {
+<app-individual-step2
+  [user]="user"
+  (formSubmitted)="goToNextStep($event)"
+></app-individual-step2>
+} @if (step === 3) {
+<app-individual-step3 [user]="user"></app-individual-step3>
+}

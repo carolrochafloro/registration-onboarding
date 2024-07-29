@@ -1,11 +1,34 @@
-import { Component, Output } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { IndividualStep1Component } from '../../components/individual-step1/individual-step1.component';
+import { IndividualStep2Component } from '../../components/individual-step2/individual-step2.component';
+import { HeaderComponent } from '../../components/header/header.component';
+import { IUser } from '../../interfaces/individual.interface';
+import { IndividualStep3Component } from '../../components/individual-step3/individual-step3.component';
+import { JoinUsComponent } from '../../components/join-us/join-us.component';
 
 @Component({
   selector: 'app-individual',
   standalone: true,
-  imports: [IndividualComponent, IndividualStep1Component],
+  imports: [
+    HeaderComponent,
+    IndividualStep1Component,
+    IndividualStep2Component,
+    IndividualStep3Component,
+  ],
   templateUrl: './individual.component.html',
   styleUrl: './individual.component.scss',
 })
-export class IndividualComponent {}
+export class IndividualComponent {
+  index = 0;
+  step = 1;
+  stageOptions = ['Personal Info.', 'Residency Info.', 'Bank Verification'];
+  stage = this.stageOptions[this.index];
+
+  user?: IUser;
+
+  goToNextStep(user: IUser) {
+    this.user = user;
+    this.step++;
+    this.stage = this.stageOptions[this.index++];
+  }
+}

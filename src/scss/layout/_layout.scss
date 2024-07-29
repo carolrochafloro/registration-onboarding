@@ -10,4 +10,8 @@ body {
   width: 60%;
   box-sizing: border-box;
   flex-wrap: wrap;
+
+  .form {
+    box-sizing: content-box;
+  }
 }
