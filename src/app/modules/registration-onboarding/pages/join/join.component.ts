@@ -1,11 +1,10 @@
 import { Component, Input } from '@angular/core';
-import { JoinUsComponent } from '../../components/join-us/join-us.component';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-join',
   standalone: true,
-  imports: [JoinUsComponent],
+  imports: [],
   templateUrl: './join.component.html',
   styleUrl: './join.component.scss',
 })
