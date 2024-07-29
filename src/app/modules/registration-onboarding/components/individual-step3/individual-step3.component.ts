@@ -16,6 +16,7 @@ export class IndividualStep3Component {
 
   onSubmit(form: NgForm) {
     if (this.user) {
+      this.user.bvn = true;
       this.formSubmitted.emit(this.user);
       form.resetForm();
     }

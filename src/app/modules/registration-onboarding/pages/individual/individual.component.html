@@ -10,5 +10,8 @@
   (formSubmitted)="goToNextStep($event)"
 ></app-individual-step2>
 } @if (step === 3) {
-<app-individual-step3 [user]="user"></app-individual-step3>
+<app-individual-step3
+  [user]="user"
+  (formSubmitted)="goToDashboard($event)"
+></app-individual-step3>
 }

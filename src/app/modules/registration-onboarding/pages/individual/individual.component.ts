@@ -4,7 +4,7 @@ import { IndividualStep2Component } from '../../components/individual-step2/indi
 import { HeaderComponent } from '../../components/header/header.component';
 import { IUser } from '../../interfaces/individual.interface';
 import { IndividualStep3Component } from '../../components/individual-step3/individual-step3.component';
-import { JoinUsComponent } from '../../components/join-us/join-us.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-individual',
@@ -19,6 +19,8 @@ import { JoinUsComponent } from '../../components/join-us/join-us.component';
   styleUrl: './individual.component.scss',
 })
 export class IndividualComponent {
+  constructor(private router: Router) {}
+
   index = 0;
   step = 1;
   stageOptions = ['Personal Info.', 'Residency Info.', 'Bank Verification'];
@@ -30,5 +32,11 @@ export class IndividualComponent {
     this.user = user;
     this.step++;
     this.stage = this.stageOptions[this.index++];
+  }
+
+  goToDashboard(user: IUser) {
+    // salvar no localstorage enquanto não faço a api
+    localStorage.setItem('user', JSON.stringify(user));
+    this.router.navigate(['/dashboard']);
   }
 }

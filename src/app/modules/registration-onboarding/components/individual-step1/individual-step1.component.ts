@@ -29,6 +29,7 @@ export class IndividualStep1Component {
           address: '',
           country: '',
         },
+        bvn: false,
       };
 
       form.resetForm({
