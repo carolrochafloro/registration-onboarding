@@ -7,4 +7,5 @@ export interface IUser {
     address: string;
     country: string;
   };
+  bvn: boolean;
 }
