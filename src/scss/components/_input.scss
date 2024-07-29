@@ -1,3 +1,37 @@
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .input-container {
+    margin-bottom: 0.5rem;
+  }
+
+  .checkbox {
+    display: flex;
+    align-items: center;
+    margin: 0.75rem 0;
+    gap: 0.5rem;
+
+    input {
+      cursor: pointer;
+      width: 1rem;
+      height: 1rem;
+      border: 1px solid var(--light-grey);
+      margin: 0;
+      box-shadow: none;
+    }
+
+    input:hover {
+      box-shadow: var(--box-shadow);
+    }
+
+    input:checked {
+      background-color: var(--primary);
+    }
+  }
+}
+
 input {
   width: 100%;
   border-radius: 4px;
@@ -25,4 +59,33 @@ input:focus {
 label {
   font-size: 10px;
   color: var(--grey);
+}
+
+.dropdown {
+  margin: 0.5rem 0;
+  width: 100%;
+
+  select {
+    border: 1px solid var(--light-grey);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid var(--primary);
+    }
+
+    &:focus {
+      border: 1px solid var(--primary);
+      outline: none;
+      color: var(--grey);
+      font-weight: 600;
+    }
+
+    option {
+      padding: 0.5rem 1rem;
+      color: var(--grey);
+    }
+  }
 }
