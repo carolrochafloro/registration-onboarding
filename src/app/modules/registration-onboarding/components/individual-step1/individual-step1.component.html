@@ -20,24 +20,29 @@
         <label for="email">E-mail</label>
         <input
           type="text"
-          placeholder="example@email.com.br"
+          placeholder="example@email.com"
           name="email"
           ngModel
           required
           aria-label="Your e-mail"
-          pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,2}$"
+          pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:\.[a-zA-Z]{2})?$"
         />
       </div>
 
       <div class="input-container">
-        <label for="password">Passowrd</label>
+        <label for="password"
+          >Password (upper and lowercase, number and 1 special char)</label
+        >
         <input
           type="password"
-          placeholder="Password"
+          placeholder="Min. 8 chars"
+          x-moz
           ngModel
           name="password"
           required
           aria-label="Your password"
+          pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,}$"
+          title="Password must include an uppercase letter, a lowercase letter, a number, and a special character."
         />
       </div>
 
