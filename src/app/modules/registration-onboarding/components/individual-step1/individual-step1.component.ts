@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { HeaderComponent } from '../../components/header/header.component';
 import { NgForm, FormsModule } from '@angular/forms';
 import { IUser } from '../../interfaces/individual.interface';
@@ -6,13 +6,12 @@ import { IUser } from '../../interfaces/individual.interface';
 @Component({
   selector: 'app-individual-step1',
   standalone: true,
-  imports: [HeaderComponent, FormsModule],
+  imports: [FormsModule],
   templateUrl: './individual-step1.component.html',
   styleUrl: './individual-step1.component.scss',
 })
 export class IndividualStep1Component {
-  step = 1;
-  stage = 'Personal Info.';
+  @Output() formSubmitted = new EventEmitter<IUser>();
 
   fullName = '';
   email = '';
@@ -25,9 +24,12 @@ export class IndividualStep1Component {
         fullName: form.value.fullName,
         email: form.value.email,
         password: form.value.password,
+        residencyInfo: {
+          phone: '',
+          address: '',
+          country: '',
+        },
       };
-
-      localStorage.setItem('user', JSON.stringify(user));
 
       form.resetForm({
         fullName: '',
@@ -35,6 +37,8 @@ export class IndividualStep1Component {
         password: '',
         agreeTerms: false,
       });
+
+      this.formSubmitted.emit(user);
     }
   }
 }
