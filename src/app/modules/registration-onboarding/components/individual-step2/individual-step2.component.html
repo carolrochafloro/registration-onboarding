@@ -1,1 +1,57 @@
-<app-header [step]="step" [stage]="stage" />
+<div class="container">
+  <h1>Complete your profile!</h1>
+  <p class="p-style">For regulatory compliance, your details are required.</p>
+  <div class="separator"></div>
+
+  <div class="form">
+    <form action="input" (ngSubmit)="onSubmit(form)" #form="ngForm">
+      <div class="input-container">
+        <label for="phone">Phone number</label>
+        <input
+          type="text"
+          name="phone"
+          ngModel
+          placeholder="Type your phone"
+          required
+          aria-label="Your phone"
+        />
+      </div>
+
+      <div class="input-container">
+        <label for="address">Your address</label>
+        <input
+          type="text"
+          placeholder="Type your address"
+          name="address"
+          ngModel
+          required
+          aria-label="Your address"
+        />
+      </div>
+
+      <div class="dropdown">
+        <label for="country">Country of residence</label>
+        <select
+          name="country"
+          id="country"
+          [(ngModel)]="selectedCountry"
+          (change)="onCountryChange($event)"
+          class="dropdown"
+        >
+          <option value="" disabled selected>Select your country</option>
+          @for (item of country; track $index) {
+          <option value="country">{{ item }}</option>
+          }
+        </select>
+      </div>
+
+      <button
+        type="submit"
+        class="btn btn-primary"
+        [disabled]="form.invalid || selectedCountry === ''"
+      >
+        Save & Continue
+      </button>
+    </form>
+  </div>
+</div>
