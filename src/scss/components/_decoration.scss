@@ -24,3 +24,10 @@
   background-color: #f0f0f0;
   margin: 0.5rem 0;
 }
+
+@media (max-width: 750px) {
+  .decor-vertical,
+  .decor-horizontal {
+    display: none;
+  }
+}

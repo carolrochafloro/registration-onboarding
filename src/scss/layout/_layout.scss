@@ -5,13 +5,35 @@ body {
 
 .container {
   display: flex;
-  align-items: center;
-  margin: 2.5rem 6rem;
-  width: 60%;
-  box-sizing: border-box;
+  flex-direction: column;
+  width: 80%;
   flex-wrap: wrap;
+  padding: 2rem;
+  position: relative;
 
-  .form {
-    box-sizing: content-box;
+  &.main {
+    width: inherit;
+  }
+}
+
+@media (max-width: 750px) {
+  body {
+    display: flex;
+    align-items: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+
+    width: 90vw;
+
+    &.main {
+      padding: 0;
+    }
   }
 }

@@ -6,7 +6,6 @@
   background-size: cover;
   background-position: left;
   background-repeat: no-repeat;
-  // padding: 1.5rem 0 0 3rem;
 
   display: flex;
   flex-direction: column;
@@ -48,7 +47,7 @@
     padding: 6rem 3rem 0 3rem;
     position: relative;
 
-    z-index: 2;
+    z-index: 1;
 
     .paragraph {
       .decor-text {
@@ -85,6 +84,36 @@
         color: var(--white);
         font-size: 12px;
       }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .bg {
+    width: 100vw;
+    height: 10vh;
+    justify-content: center;
+
+    &::before {
+      height: 10vh;
+      width: 100vw;
+    }
+
+    .brand {
+      align-items: center;
+      padding: 1rem;
+      margin: 0;
+
+      p {
+        color: var(--white);
+        font-weight: 600;
+        font-family: "Poppins";
+        text-align: left;
+      }
+    }
+
+    .quote {
+      display: none;
     }
   }
 }
