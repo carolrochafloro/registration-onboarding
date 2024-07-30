@@ -1,46 +1,51 @@
-div {
-  margin: 1.5rem 3rem;
-  header {
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  margin-bottom: 2rem;
+
+  a {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    font-size: 12px;
-    user-select: none;
+    color: var(--grey);
+    gap: 0.5rem;
+    transition: 0.5s;
 
-    a {
-      display: flex;
-      align-items: center;
-      color: var(--grey);
-      gap: 0.5rem;
-      transition: 0.5s;
+    &:hover {
+      color: var(--light-grey);
+    }
+  }
 
-      &:hover {
-        color: var(--light-grey);
-      }
+  .internal {
+    position: fixed;
+    right: 3rem;
+    top: 3rem;
+    margin: 0;
+    cursor: default;
+
+    p {
+      margin: 0;
+      color: var(--light-grey);
+      text-align: right;
+      text-transform: uppercase;
     }
 
-    div {
-      margin: 0;
-      cursor: default;
-
-      p {
-        margin: 0;
-        color: var(--light-grey);
-        text-align: right;
-        text-transform: uppercase;
-      }
-
-      .bold {
-        font-weight: 600;
-        color: var(--grey);
-        text-transform: none;
-      }
+    .bold {
+      font-weight: 600;
+      color: var(--grey);
+      text-transform: none;
     }
   }
 }
 
 @media (max-width: 750px) {
-  div {
+  header {
+    justify-self: center;
     margin: 1rem 0;
+
+    .internal {
+      position: static;
+    }
   }
 }
