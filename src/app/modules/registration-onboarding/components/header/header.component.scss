@@ -38,3 +38,9 @@ div {
     }
   }
 }
+
+@media (max-width: 750px) {
+  div {
+    margin: 1rem 0;
+  }
+}

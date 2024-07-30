@@ -23,3 +23,22 @@
     }
   }
 }
+
+@media (max-width: 750px) {
+  .container {
+    h1 {
+      margin: 1rem 0.5rem 0;
+    }
+
+    .separator {
+      margin: 1rem 0;
+    }
+    form {
+      padding: 0;
+
+      &label {
+        text-align: left;
+      }
+    }
+  }
+}
