@@ -1,6 +1,6 @@
 body {
   display: grid;
-  grid-template-columns: 45vw auto;
+  grid-template-columns: 1fr 2fr;
 }
 
 .container {
@@ -10,12 +10,15 @@ body {
   flex-direction: column;
   width: 80%;
   flex-wrap: wrap;
-  padding: 0 2rem 2rem 2rem;
-  position: relative;
 
-  &.main {
-    width: inherit;
-  }
+  position: relative;
+}
+
+.main {
+  width: 80%;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 750px) {

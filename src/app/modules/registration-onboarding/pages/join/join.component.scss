@@ -1,12 +1,11 @@
 .container {
-}
+  &header {
+    margin-bottom: 3rem;
+    text-align: right;
 
-header {
-  margin-bottom: 3rem;
-  text-align: right;
-
-  a:hover {
-    transition: 0.5s;
-    color: var(--primary-010);
+    a:hover {
+      transition: 0.5s;
+      color: var(--primary-010);
+    }
   }
 }
