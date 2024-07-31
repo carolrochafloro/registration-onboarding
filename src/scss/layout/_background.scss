@@ -26,7 +26,7 @@
 
   .elements-bg {
     position: absolute;
-    top: 15%;
+    top: 10%;
 
     .quote {
       display: flex;
@@ -48,9 +48,10 @@
 
         p {
           color: var(--white);
-          font-size: 2rem;
+          font-size: 1.5rem;
           font-weight: 400;
-          line-height: 3rem;
+          line-height: 2rem;
+          letter-spacing: 1px;
         }
       }
 
@@ -60,15 +61,13 @@
         gap: 1rem;
 
         img {
-          width: 1.5rem;
-          height: 1.5rem;
+          width: 1rem;
+          height: 1rem;
         }
 
         p {
-          line-height: normal;
-          margin: 0;
           color: var(--white);
-          font-size: 1.5rem;
+          letter-spacing: 1px;
         }
       }
     }
@@ -86,7 +85,7 @@
       font-weight: 600;
       font-family: "Poppins";
       text-align: left;
-      font-size: 1.5rem;
+      font-size: 1rem;
     }
   }
 }
