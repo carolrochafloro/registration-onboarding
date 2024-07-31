@@ -45,11 +45,17 @@ header {
 
 @media (max-width: 750px) {
   header {
-    justify-self: center;
-    margin: 1rem 0;
+    justify-content: space-between;
+    position: relative;
+
+    a {
+      position: relative;
+      left: 0rem;
+    }
 
     .internal {
-      position: static;
+      position: relative;
+      right: 0rem;
     }
   }
 }
