@@ -1,21 +1,21 @@
 .decor-vertical {
-  width: 0.5rem;
-  height: 1rem;
+  width: 1rem;
+  height: 3rem;
   background: var(--white);
   z-index: 1;
-  align-self: flex-end;
-  margin-right: 3rem;
-  display: inline;
+  position: absolute;
+  right: 4rem;
+  bottom: 0;
 }
 
 .decor-horizontal {
-  width: 1.5rem;
-  height: 0.5rem;
+  width: 3rem;
+  height: 1rem;
   background: var(--white);
   z-index: 1;
-  align-self: flex-end;
-  margin-right: 3rem;
-  display: inline;
+  position: absolute;
+  right: 4rem;
+  bottom: 0;
 }
 
 .separator {

@@ -1,21 +1,20 @@
 body {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 2fr 3fr;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  width: 80%;
   flex-wrap: wrap;
   position: relative;
 }
 
 .main {
-  width: 80%;
-  padding: 2rem;
   justify-content: center;
   align-items: center;
+  z-index: 2;
+  background-color: var(--white);
 }
 
 @media (max-width: 750px) {
