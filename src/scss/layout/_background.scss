@@ -1,5 +1,6 @@
 .bg {
   height: 100vh;
+  max-height: 100vh;
   background-image: url("../../../public/background-building.jpg");
 
   background-size: cover;
@@ -75,7 +76,7 @@
 
   .brand {
     display: flex;
-    margin: 3rem 0 0 3rem;
+    margin: 3rem;
     gap: 0.5rem;
     z-index: 1;
     align-items: baseline;
