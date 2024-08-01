@@ -1,27 +1,25 @@
+header {
+  text-align: right;
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+}
+
 .container {
-  header {
-    margin-bottom: 3rem;
-    text-align: right;
-    position: fixed;
-    top: 3rem;
-    right: 3rem;
+  margin-top: 8rem;
+  p {
+    margin: 0;
+  }
 
-    p {
-      margin: 0;
-    }
-
-    a:hover {
-      transition: 0.5s;
-      color: var(--primary-010);
-    }
+  a:hover {
+    transition: 0.5s;
+    color: var(--primary-010);
   }
 }
 
 @media (max-width: 750px) {
-  .container {
-    header {
-      position: static;
-      margin-top: 1.5rem;
-    }
+  header {
+    position: static;
+    margin-top: 1.5rem;
   }
 }

@@ -1,15 +1,12 @@
 header {
   display: flex;
   user-select: none;
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
-
-  align-items: baseline;
+  margin-bottom: 1rem;
+  justify-content: space-between;
 
   a {
-    position: absolute;
-    left: 4rem;
-    top: 3rem;
+    position: relative;
+    left: 0;
     display: flex;
     align-items: center;
     color: var(--grey);
@@ -22,9 +19,8 @@ header {
   }
 
   .internal {
-    position: absolute;
-    right: 4rem;
-    top: 3rem;
+    position: relative;
+    right: 0;
 
     cursor: default;
 
@@ -47,6 +43,7 @@ header {
   header {
     justify-content: space-between;
     position: relative;
+    padding-top: 2rem;
 
     a {
       position: relative;

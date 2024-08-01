@@ -3,56 +3,54 @@
   <p class="p-style">For regulatory compliance, your details are required.</p>
   <div class="separator"></div>
 
-  <div class="form">
-    <form action="input" (ngSubmit)="onSubmit(form)" #form="ngForm">
-      <div class="input-container">
-        <label for="phone">Phone number</label>
-        <input
-          type="text"
-          name="phone"
-          ngModel
-          placeholder="XX XXXX XXXX"
-          required
-          aria-label="Your phone"
-          pattern="^\d{1,10}$"
-        />
-      </div>
+  <form action="input" (ngSubmit)="onSubmit(form)" #form="ngForm">
+    <div class="input-container">
+      <label for="phone">Phone number</label>
+      <input
+        type="text"
+        name="phone"
+        ngModel
+        placeholder="XX XXXX XXXX"
+        required
+        aria-label="Your phone"
+        pattern="^\d{1,10}$"
+      />
+    </div>
 
-      <div class="input-container">
-        <label for="address">Your address</label>
-        <input
-          type="text"
-          placeholder="Type your address"
-          name="address"
-          ngModel
-          required
-          aria-label="Your address"
-        />
-      </div>
+    <div class="input-container">
+      <label for="address">Your address</label>
+      <input
+        type="text"
+        placeholder="Type your address"
+        name="address"
+        ngModel
+        required
+        aria-label="Your address"
+      />
+    </div>
 
-      <div class="dropdown">
-        <label for="country">Country of residence</label>
-        <select
-          name="country"
-          id="country"
-          [(ngModel)]="selectedCountry"
-          (change)="onCountryChange($event)"
-          class="dropdown"
-        >
-          <option value="" disabled selected>Select your country</option>
-          @for (item of country; track $index) {
-          <option value="country">{{ item }}</option>
-          }
-        </select>
-      </div>
-
-      <button
-        type="submit"
-        class="btn btn-primary"
-        [disabled]="form.invalid || selectedCountry === ''"
+    <div class="dropdown">
+      <label for="country">Country of residence</label>
+      <select
+        name="country"
+        id="country"
+        [(ngModel)]="selectedCountry"
+        (change)="onCountryChange($event)"
+        class="dropdown"
       >
-        Save & Continue
-      </button>
-    </form>
-  </div>
+        <option value="" disabled selected>Select your country</option>
+        @for (item of country; track $index) {
+        <option value="country">{{ item }}</option>
+        }
+      </select>
+    </div>
+
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="form.invalid || selectedCountry === ''"
+    >
+      Save & Continue
+    </button>
+  </form>
 </div>
