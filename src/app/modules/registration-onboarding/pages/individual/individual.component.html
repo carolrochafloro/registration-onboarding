@@ -1,6 +1,6 @@
 <app-header [step]="step" [stage]="stage" />
 
-<!-- @if (step === 1) {
+@if (step === 1) {
 <app-individual-step1
   (formSubmitted)="goToNextStep($event)"
 ></app-individual-step1>
@@ -14,9 +14,4 @@
   [user]="user"
   (formSubmitted)="goToDashboard($event)"
 ></app-individual-step3>
-} -->
-
-<app-individual-step2
-  [user]="user"
-  (formSubmitted)="goToNextStep($event)"
-></app-individual-step2>
+}
