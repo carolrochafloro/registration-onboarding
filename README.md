@@ -1,5 +1,8 @@
 # Registration Onboarding
 
+![image](https://github.com/user-attachments/assets/e302f85c-d7d5-4b77-a730-18d772cc57d6)
+
+
 This project is a responsive registration onboarding website developed with Angular. It was designed based on a public template from Figma.
 
 ## Design Template
