@@ -19,7 +19,7 @@ You can see the live demo of the project at the following link:
 First, clone the repository to your local machine:
 
 ```bash
-git clone [<repository-url>](https://github.com/carolrochafloro/registration-onboarding/)
+git clone https://github.com/carolrochafloro/registration-onboarding/
 ```
 
 Then, navigate into the project directory:
