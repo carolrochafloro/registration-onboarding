@@ -1,4 +1,4 @@
-<app-header [step]="step" [stage]="stage" />
+<app-header [step]="step" [stage]="stage" (newStep)="onNewStep($event)" />
 
 @if (step === 1) {
 <app-individual-step1

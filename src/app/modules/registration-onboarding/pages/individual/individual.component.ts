@@ -28,6 +28,15 @@ export class IndividualComponent {
 
   user?: IUser;
 
+  onNewStep(newStep: number) {
+    if (newStep < 1) {
+      this.router.navigate(['']);
+    }
+
+    this.step = newStep;
+    this.stage = this.stageOptions[this.index--];
+  }
+
   goToNextStep(user: IUser) {
     this.user = user;
     this.step++;

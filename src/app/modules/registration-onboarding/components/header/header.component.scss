@@ -4,7 +4,7 @@ header {
   margin-bottom: 1rem;
   justify-content: space-between;
 
-  a {
+  button {
     position: relative;
     left: 0;
     display: flex;
@@ -12,6 +12,9 @@ header {
     color: var(--grey);
     gap: 0.5rem;
     transition: 0.5s;
+    box-shadow: none;
+    background: none;
+    border: none;
 
     &:hover {
       color: var(--light-grey);
